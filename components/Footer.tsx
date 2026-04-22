@@ -1,21 +1,123 @@
 const footerColumns = [
   {
     title: "Company Info",
-    items: ["About us", "Store accessibility", "Policies", "Real-time support"],
+    items: ["About Fitzo", "Social Responsibility", "Affiliate", "Fashion Blogger"],
   },
   {
     title: "Help & Support",
-    items: ["Shipping info", "Returns", "Track order", "Size guide"],
+    items: ["Shipping Info", "Returns", "How to Order", "How to Track", "Size Chart"],
   },
   {
     title: "Customer Care",
-    items: ["Contact us", "Virtual fit", "Store pickup", "Styling"],
+    items: ["Contact Us", "Payment", "Bonus Point", "Notices"],
   },
 ];
 
-function SocialIcon({ label }: { label: string }) {
+const legalLinksTop = [
+  "Privacy Center",
+  "Privacy & Cookie Policy",
+  "Manage Cookies",
+];
+
+const legalLinksBottom = [
+  "Terms & Conditions",
+  "Copyright Notice",
+  "Imprint",
+];
+
+const paymentItems = [
+
+
+  "G Pay",
+  "Phonepe",
+  "Paytm",
+  "Amazon Pay",
+  "COD"
+];
+
+function FacebookIcon() {
   return (
-    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#1d1d1d] text-[12px] font-bold text-[#1d1d1d] transition duration-300 hover:bg-[#1d1d1d] hover:text-white">
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="currentColor" aria-hidden="true">
+      <path d="M13.4 21v-7.3H16l.4-2.9h-3V8.9c0-.8.2-1.4 1.4-1.4h1.5V5c-.3 0-1.3-.1-2.4-.1-2.3 0-3.9 1.4-3.9 4.1v1.8H7.3v2.9H10V21h3.4z" />
+    </svg>
+  );
+}
+
+function TwitterIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="currentColor" aria-hidden="true">
+      <path d="M21 7.2c-.7.3-1.4.5-2.1.6.8-.4 1.3-1.1 1.6-2-.7.4-1.5.8-2.4.9a3.9 3.9 0 00-6.7 3.6A11 11 0 013.5 6.6a3.9 3.9 0 001.2 5.2c-.6 0-1.1-.2-1.6-.4 0 1.9 1.3 3.4 3 3.8-.5.1-1 .2-1.5.1.4 1.4 1.8 2.5 3.4 2.5A7.8 7.8 0 013 19.5a11 11 0 005.9 1.7c7 0 10.9-5.8 10.9-10.9v-.5c.8-.5 1.5-1.2 2.1-2z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[15px] w-[15px]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      aria-hidden="true"
+    >
+      <rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.2" />
+      <circle cx="12" cy="12" r="4.1" />
+      <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function TikTokIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="currentColor" aria-hidden="true">
+      <path d="M14.2 4c.4 1.8 1.4 2.9 3.1 3.4v2.3c-1.1 0-2.2-.3-3.1-.9v5.4c0 2.8-1.8 4.6-4.4 4.6-2.5 0-4.3-1.8-4.3-4.2 0-2.7 2-4.4 4.9-4.3v2.2c-1.4-.1-2.4.6-2.4 1.8 0 1 .8 1.8 1.8 1.8 1.2 0 1.9-.7 1.9-2.1V4h2.5z" />
+    </svg>
+  );
+}
+
+function SnapchatIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="currentColor" aria-hidden="true">
+      <path d="M12 3c2.6 0 4.4 1.8 4.4 4.2 0 .5 0 1-.1 1.6.2.2.5.4.8.5.4.2.9.3 1.3.5.2.1.2.4.1.6-.4.4-1.1.7-1.9.8-.2.5-.5 1-.8 1.5.4.2.7.3 1.1.4.3.1.4.4.2.7-.4.5-1.1.7-1.9.7-.6.7-1.4 1.2-2.4 1.5l-.3.9H11l-.3-.9c-1-.3-1.8-.8-2.4-1.5-.8 0-1.5-.2-1.9-.7-.2-.3-.1-.6.2-.7.4-.1.7-.2 1.1-.4-.3-.5-.6-1-.8-1.5-.8-.1-1.5-.4-1.9-.8-.1-.2-.1-.5.1-.6.4-.2.9-.3 1.3-.5.3-.1.6-.3.8-.5-.1-.6-.1-1.1-.1-1.6C7.6 4.8 9.4 3 12 3z" />
+    </svg>
+  );
+}
+
+function AndroidIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[30px] w-[30px]" fill="currentColor" aria-hidden="true">
+      <path d="M7.2 8.2h9.6a3 3 0 013 3v5.1h-1.9V19a.9.9 0 11-1.8 0v-2.7h-1.3V19a.9.9 0 11-1.8 0v-2.7h-1.1V19a.9.9 0 11-1.8 0v-2.7H8V19a.9.9 0 11-1.8 0v-2.7H4.3v-5.1a3 3 0 013-3zm2-4l1 1.8h3.5l1-1.8.8.4-.9 1.6c.8.3 1.5.8 2 1.4H7.4c.5-.6 1.2-1.1 2-1.4l-.9-1.6.7-.4zm.3 2.3a.7.7 0 100-1.4.7.7 0 000 1.4zm5 0a.7.7 0 100-1.4.7.7 0 000 1.4z" />
+    </svg>
+  );
+}
+
+function AppleIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[30px] w-[30px]" fill="currentColor" aria-hidden="true">
+      <path d="M16.7 12.4c0-2 1.6-2.9 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.3.8-3 .8-.7 0-1.6-.8-2.6-.8-1.4 0-2.7.8-3.4 2-1.4 2.4-.4 6.1 1 8.1.7 1.1 1.5 2.1 2.6 2.1 1.1 0 1.5-.7 2.9-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-.9 2.6-1.9.8-1.2 1.1-2.2 1.1-2.3 0 0-2.8-1.1-2.8-3.4zM14.8 6.1c.6-.7.9-1.7.8-2.6-.8 0-1.8.5-2.4 1.2-.6.7-1 1.6-.9 2.5.9.1 1.9-.5 2.5-1.1z" />
+    </svg>
+  );
+}
+
+function SocialButton({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href="#"
+      className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-[#293245] text-[#1d2433] transition duration-200 hover:border-[#111827] hover:text-[#111827]"
+    >
+      {children}
+    </a>
+  );
+}
+
+function PaymentBadge({ label }: { label: string }) {
+  return (
+    <span className="flex h-[34px] items-center justify-center rounded-[2px] border border-[#d7d1c8] bg-[#faf9f7] px-3 text-[10px] font-medium uppercase tracking-[0.08em] text-[#2c2c2c]">
       {label}
     </span>
   );
@@ -23,95 +125,146 @@ function SocialIcon({ label }: { label: string }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#e5ddd1] bg-[#f6f2ec] pt-12 text-[#242424]">
-      <div className="section-frame">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.2fr_1fr]">
-          <div>
+    <footer className="bg-[#f3f3f3] text-[#273041]">
+      <div className="mx-auto w-full max-w-[1440px] px-8 pb-10 pt-12 sm:px-10 lg:px-14 xl:px-20">
+        <div className="grid grid-cols-1 gap-y-10 xl:grid-cols-[180px_160px_170px_160px_1fr_110px] xl:gap-x-8">
+          <div className="xl:pt-1">
             <a
               href="#"
-              className="font-display text-[28px] font-semibold tracking-[0.14em]"
+              className="font-serif text-[34px] font-semibold tracking-[0.07em] text-[#161d2b]"
             >
               FITZO
             </a>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-3">
-            {footerColumns.map((column) => (
-              <div key={column.title}>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#70685f]">
-                  {column.title}
-                </p>
-                <ul className="mt-4 space-y-3 text-[13px] text-[#3d3a36]">
-                  {column.items.map((item) => (
-                    <li key={item}>
-                      <a href="#" className="transition duration-300 hover:text-black">
-                        {item}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          {footerColumns.map((column) => (
+            <div key={column.title}>
+              <h3 className="text-[12px] font-semibold uppercase tracking-[0.12em] text-[#2b3342]">
+                {column.title}
+              </h3>
 
-          <div className="space-y-6">
-            <div>
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#70685f]">
-                Socials
-              </p>
-              <div className="mt-4 flex items-center gap-3">
-                <SocialIcon label="f" />
-                <SocialIcon label="p" />
-                <SocialIcon label="ig" />
-                <SocialIcon label="x" />
-              </div>
+              <ul className="mt-5 space-y-[10px] text-[14px] leading-[1.45] text-[#767d89]">
+                {column.items.map((item) => (
+                  <li key={item}>
+                    <a href="#" className="transition duration-200 hover:text-[#111827]">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          <div className="min-w-0">
+            <h3 className="text-[12px] font-semibold uppercase tracking-[0.12em] text-[#2b3342]">
+              Socials
+            </h3>
+
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <SocialButton>
+                <FacebookIcon />
+              </SocialButton>
+              <SocialButton>
+                <TwitterIcon />
+              </SocialButton>
+              <SocialButton>
+                <InstagramIcon />
+              </SocialButton>
+              <SocialButton>
+                <TikTokIcon />
+              </SocialButton>
+              <SocialButton>
+                <SnapchatIcon />
+              </SocialButton>
             </div>
 
-            <div>
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#70685f]">
-                Newsletter
-              </p>
-              <p className="mt-3 text-[13px] leading-6 text-[#4e4a45]">
-                Join FitZo updates for faster drops, city launches, and weekly
-                styling picks.
-              </p>
-              <form className="mt-4 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-10 max-w-[760px]">
+              <h3 className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#2b3342]">
+                Sign Up For Fitzo Style News
+              </h3>
+
+              <form className="mt-4 flex w-full flex-col gap-3 md:flex-row">
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="h-11 min-w-0 flex-1 border border-[#d7cfc3] bg-white px-4 text-[13px] outline-none transition duration-300 placeholder:text-[#9b958e] focus:border-[#1d1d1d]"
+                  className="h-[48px] min-w-0 flex-1 border border-[#afb6c0] bg-transparent px-5 text-[14px] text-[#404855] outline-none placeholder:text-[#8b939f] focus:border-[#263041]"
                 />
                 <button
                   type="submit"
-                  className="h-11 border border-[#1d1d1d] bg-[#1d1d1d] px-5 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white transition duration-300 hover:bg-transparent hover:text-[#1d1d1d]"
+                  className="h-[48px] min-w-[170px] bg-[#1f2a3c] px-6 text-[13px] font-medium uppercase tracking-[0.08em] text-white transition duration-200 hover:bg-[#151e2d]"
                 >
                   Subscribe
                 </button>
               </form>
+
+              <p className="mt-4 max-w-[720px] text-[12px] leading-6 text-[#77716b]">
+                By clicking the SUBSCRIBE button, you are agreeing to our{" "}
+                <a href="#" className="font-medium text-[#3e6dd2] underline">
+                  Privacy & Cookie Policy
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-[12px] font-semibold uppercase tracking-[0.12em] text-[#2b3342]">
+              Platforms
+            </h3>
+
+            <div className="mt-5 flex items-center gap-5 text-[#1f2a3c]">
+              <a href="#" className="transition duration-200 hover:opacity-80">
+                <AndroidIcon />
+              </a>
+              <a href="#" className="transition duration-200 hover:opacity-80">
+                <AppleIcon />
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-[#e2d9cd] py-7 text-[12px] text-[#5d564f]">
-          <p>Copyright 2026 All rights reserved</p>
-          <div className="flex flex-wrap gap-2">
-            {[
-              "mc",
-              "visa",
-              "amex",
-              "gpay",
-              "paypal",
-              "upi",
-              "apple",
-              "paytm",
-            ].map((item) => (
-              <span
-                key={item}
-                className="payment-swatch flex h-7 min-w-10 items-center justify-center px-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#333]"
-              >
-                {item}
-              </span>
-            ))}
+        <div className="mt-14 grid grid-cols-1 gap-y-10 xl:grid-cols-[1fr_480px] xl:gap-x-12">
+          <div>
+            <p className="text-[13px] text-[#767d89]">
+              ©2010-2022 Fitzo All Rights Reserved
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center text-[13px] text-[#767d89]">
+              {legalLinksTop.map((item, index) => (
+                <div key={item} className="flex items-center">
+                  <a href="#" className="transition duration-200 hover:text-[#111827] hover:underline">
+                    {item}
+                  </a>
+                  {index !== legalLinksTop.length - 1 && (
+                    <span className="mx-3 text-[#c0b9b0]">|</span>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-3 flex flex-wrap items-center text-[13px] text-[#767d89]">
+              {legalLinksBottom.map((item, index) => (
+                <div key={item} className="flex items-center">
+                  <a href="#" className="transition duration-200 hover:text-[#111827] hover:underline">
+                    {item}
+                  </a>
+                  {index !== legalLinksBottom.length - 1 && (
+                    <span className="mx-3 text-[#c0b9b0]">|</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-[12px] font-semibold uppercase tracking-[0.12em] text-[#2b3342]">
+              We Accept
+            </h3>
+
+            <div className="mt-5 flex flex-wrap gap-2.5">
+              {paymentItems.map((item) => (
+                <PaymentBadge key={item} label={item} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
