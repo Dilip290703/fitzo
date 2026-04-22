@@ -1,4 +1,4 @@
-const topLinks = ["Home", "Products", "Categories", "Sale"];
+const topLinks = ["Home", "Categories", "About Us", "Contact Us", "Sale"];
 const categoryLinks = ["Men", "Women", "Kids", "Home", "Collections"];
 
 function SearchIcon() {
@@ -83,9 +83,11 @@ export function Navbar() {
               <a
                 key={item}
                 href="#"
-                className="transition duration-200 hover:text-black"
+                className="group relative inline-block pb-2 transition-colors duration-200 hover:text-black"
               >
-                {item}
+                <span>{item}</span>
+
+                <span className="pointer-events-none absolute bottom-0 left-0 h-[1.5px] w-full scale-x-0 bg-black opacity-0 origin-left transition-all duration-300 ease-out group-hover:scale-x-100 group-hover:opacity-100 group-hover:origin-left group-[&:not(:hover)]:origin-right" />
               </a>
             ))}
           </nav>
@@ -119,6 +121,7 @@ export function Navbar() {
             >
               <SearchIcon />
             </button>
+
             <button
               type="button"
               className="hidden transition duration-200 hover:text-black md:block"
@@ -126,6 +129,7 @@ export function Navbar() {
             >
               <HeartIcon />
             </button>
+
             <button
               type="button"
               className="transition duration-200 hover:text-black"
